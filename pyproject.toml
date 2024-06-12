@@ -1,0 +1,23 @@
+[project]
+name = "fortran-project-template"
+version = "2024.0.1"
+dependencies = ["fpm", "ford", "graphviz"]
+requires-python = ">=3.8"
+authors = [
+  { name = "Your name", email = "your@email.com" },
+]
+description = "Fortran Template Project"
+readme = "README.md"
+license = { file = "LICENSE.txt" }
+keywords = ["fortran", "modern fortran", "mpi", "vscode"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+]
+
+[project.urls]
+Homepage = "https://github.qmul.ac.uk/aax010/fortran-project-template"
+Documentation = "https://github.qmul.ac.uk/aax010/fortran-project-template/README.md"
+Repository = "https://github.qmul.ac.uk/aax010/fortran-project-template"
+"Bug Tracker" = "https://github.qmul.ac.uk/aax010/fortran-project-template/issues"
+Changelog = "https://github.qmul.ac.uk/aax010/fortran-project-template/master/CHANGELOG.md"

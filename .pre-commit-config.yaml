@@ -1,0 +1,42 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+default_install_hook_types: [pre-commit, pre-push]
+fail_fast: false
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.5.0
+  hooks:
+  - id: trailing-whitespace
+  - id: end-of-file-fixer
+  - id: check-toml
+  - id: check-yaml
+  - id: check-added-large-files
+  - id: check-merge-conflict
+
+- repo: https://github.com/pseewald/fprettify
+  rev: v0.3.7
+  hooks:
+  - id: fprettify
+    name: auto-formatter for modern fortran source code
+    description: imposes strict whitespace formatting for modern (F90+) Fortran code
+    entry: fprettify -c .fprettify.rc
+    language: python
+    files: \.[fF]\d*$
+
+- repo: local
+  hooks:
+  - id: compile-fpm
+    name: Test successful compilation with fpm
+    entry: fpm build
+    language: system
+    pass_filenames: false
+    always_run: true
+
+- repo: local
+  hooks:
+  - id: test-fpm
+    name: Run tests with fpm
+    entry: fpm test
+    language: system
+    pass_filenames: false
+    always_run: true

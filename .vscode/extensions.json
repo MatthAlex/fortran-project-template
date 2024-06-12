@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "yzhang.markdown-all-in-one",
+        "donjayamanne.githistory",
+        "eamodio.gitlens",
+        "tamasfe.even-better-toml",
+        "fortran-lang.linter-gfortran",
+    ]
+}

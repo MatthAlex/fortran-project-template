@@ -1,0 +1,106 @@
+{
+    // General settings - can only be used in User "settings.json"
+    // "telemetry.telemetryLevel": "off",
+    // "python.diagnostics.sourceMapsEnabled": true,
+    // "python.venvFolders": [
+    //     "env", "venv", ".env", ".venv"
+    // ],
+    // General settings - can migrate to User "settings.json"
+    "editor.renderWhitespace": "all",
+    "editor.wordWrap": "on",
+    "editor.definitionLinkOpensInPeek": true,
+    "editor.foldingMaximumRegions": 1000,
+    "editor.maxTokenizationLineLength": 1000,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.formatOnSaveMode": "file",
+    "files.autoSave": "onWindowChange",
+    "files.trimFinalNewlines": false,
+    "files.trimTrailingWhitespace": true,
+    // "hides" files from the Explorer
+    "files.exclude": {
+        ".git/": true,
+        ".vscode/*": false,
+        "**/*venv": true,
+        "**/*env": true,
+        "**/.*_cache*": true,
+        "**/__pycache__": true,
+        "**/*.mod": true,
+        ".generated_modules/": true,
+    },
+    // and doesn't search in them (inherits `files.exclude`)
+    "search.exclude": {
+        ".vscode/*": false,
+    },
+    // and exclude them from the File Watcher
+    "files.watcherExclude": {
+        "**/.git/": false,
+        "**/.git/objects/**": false,
+        "**/.git/subtree-cache/**": false,
+        ".vscode/*": true,
+        "**/.venv": true,
+        "**/.*_cache*": true,
+        "**/__pycache__": true,
+        "**/*.mod": true,
+        "**/*.o": true,
+        "**/*.obj": true,
+    },
+    // Python
+    "python.analysis.completeFunctionParens": true,
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.variableTypes": true,
+    "python.analysis.typeCheckingMode": "basic",
+    "python.analysis.inlayHints.pytestParameters": true,
+    "python.analysis.userFileIndexingLimit": 40,
+    "python.analysis.exclude": [
+        "**/__pycache__",
+        "**/node_modules",
+        "**/.git",
+        "**/.*_cache",
+        "**/.vscode",
+        "**/*env",
+        "**/*venv"
+    ],
+    "python.createEnvironment.trigger": "prompt",
+    "python.languageServer": "Pylance",
+    "python.terminal.activateEnvInCurrentTerminal": true,
+    "python.testing.pytestEnabled": true,
+    "python.testing.cwd": "${workspaceFolder}/tests",
+    "python.testing.unittestEnabled": true,
+    //pylint
+    "pylint.importStrategy": "fromEnvironment",
+    // mypy
+    "mypy-type-checker.importStrategy": "fromEnvironment",
+    // flake8
+    "flake8.importStrategy": "fromEnvironment",
+    "fortran.fortls.notifyInit": true,
+    "fortran.fortls.configure": ".fortls",
+    "fortran.fortls.maxCommentLineLength": 132,
+    "fortran.fortls.maxLineLength": 132,
+    "fortran.fortls.sortKeywords": true,
+    "fortran.fortls.incrementalSync": true,
+    "fortran.formatting.formatter": "Disabled",
+    "fortran.formatting.fprettifyArgs": [
+        "--whitespace-comma 1",
+        "--enable-decl",
+        "-i 3",
+    ],
+    "fortran.provide.symbols": "fortls",
+    "fortran.linter.modOutput": "${workspaceFolder}/.generated_modules",
+    "fortran.linter.compiler": "gfortran",
+    "fortran.linter.extraArgs": [
+        "-Wall",
+        "-Wextra",
+        "-pedantic",
+        "-Warray-temporaries",
+        "-Wconversion",
+        "-fbacktrace",
+        "-O0",
+        "-g",
+        "-std=f2018",
+        "-Wuse-without-only",
+        "-Wrealloc-lhs",
+    ],
+    "fortran.linter.includePaths": [
+        "${workspaceFolder}/.generated_modules"
+    ],
+}

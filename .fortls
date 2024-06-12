@@ -1,0 +1,34 @@
+{
+   "nthreads": 4,
+   "notify_init": true,
+   "incremental_sync": true,
+   "sort_keywords": true,
+   "disable_autoupdate": true,
+   "debug_log": false,
+
+   "source_dirs": ["./src/**", "./app/"],
+   "incl_suffixes": [],
+   "excl_suffixes": [],
+   "excl_paths": ["*/source_cache/**"],
+
+   "autocomplete_no_prefix": false,
+   "autocomplete_no_snippets": false,
+   "autocomplete_name_only": false,
+   "lowercase_intrinsics": true,
+   "use_signature_help": true,
+
+   "hover_signature": true,
+   "hover_language": "fortran90",
+
+   "max_line_length": 132,
+   "max_comment_line_length": 132,
+   "disable_diagnostics": false,
+
+   "pp_suffixes": [],
+   "include_dirs": ["./generated_modules/"],
+   "pp_defs": {},
+
+   "symbol_skip_mem": false,
+
+   "enable_code_actions": true
+}
