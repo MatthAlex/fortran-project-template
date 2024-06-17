@@ -16,8 +16,8 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://github.qmul.ac.uk/aax010/fortran-project-template"
-Documentation = "https://github.qmul.ac.uk/aax010/fortran-project-template/README.md"
-Repository = "https://github.qmul.ac.uk/aax010/fortran-project-template"
-"Bug Tracker" = "https://github.qmul.ac.uk/aax010/fortran-project-template/issues"
-Changelog = "https://github.qmul.ac.uk/aax010/fortran-project-template/master/CHANGELOG.md"
+Homepage = "https://github.com/MatthAlex/fortran-project-template"
+Documentation = "https://github.com/MatthAlex/fortran-project-template/README.md"
+Repository = "https://github.com/MatthAlex/fortran-project-template"
+"Bug Tracker" = "https://github.com/MatthAlex/fortran-project-template/issues"
+Changelog = "https://github.com/MatthAlex/fortran-project-template/master/CHANGELOG.md"

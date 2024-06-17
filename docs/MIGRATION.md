@@ -20,7 +20,7 @@ By following these steps, you can seamlessly migrate your existing Fortran proje
 Start by cloning the template repository to your local machine:
 
 ```sh
-git clone git@github.qmul.ac.uk:aax010/fortran-project-template.git
+git clone git@github.com:MatthAlex/fortran-project-template.git
 cd fortran-project-template
 ```
 

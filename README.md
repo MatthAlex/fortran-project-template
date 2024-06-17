@@ -35,7 +35,7 @@ This repository showcases a sample Fortran Project.
 1. Clone the repository:
 
     ```sh
-    git clone git@github.qmul.ac.uk:aax010/fortran-project-template.git
+    git clone git@github.com:MatthAlex/fortran-project-template.git
     ```
 
 2. Load compiler modules (if on a compute cluster):
