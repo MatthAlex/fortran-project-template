@@ -4,73 +4,24 @@ This section provides a step-by-step guide to migrating your existing Fortran pr
 
 ## Summary Checklist
 
-- Clone the template repository.
-- Remove the `.git` directory from the cloned template.
-- Initialize a new Git repository.
+- Create a new repository with "Use this template".
+- Verify the setup by building the example and running the test.
 - Integrate your existing project files.
 - Update configuration files.
-- Commit and push the project to your remote repository.
-- Verify the setup by running tests and builds.
 - Make final adjustments and review the `README.md`.
+- Commit and push the project to your remote repository.
 
-By following these steps, you can seamlessly migrate your existing Fortran project into the template structure, ensuring a consistent and streamlined development environment.
+## Step 1: Use the Template Repository
 
-## Step 1: Clone the Template Repository
+On GitHub, select "Use this template", then "Create a new repository". This will create a new repository to your GitHub account, containing everything in the template as is and replacing the commits' author as well.
 
-Start by cloning the template repository to your local machine:
+### Cloning the repository
 
-```sh
-git clone git@github.com:MatthAlex/fortran-project-template.git
-cd fortran-project-template
-```
+Cloning as usual works as expected: The commits already present will be of a different author, and the remote points directly to this template repository. To create an own project by cloning, 1) remove the `.git` directory from root, 2) run `git init`, 3) create a project on GitHub, 4) follow the instructions to set up the remote and push your changes.
 
-## Step 2: Remove Existing Git History
+## Step 2: Verify `fpm` Setup
 
-Regardless of whether migrating an existing project or creating a new one, remove the existing `.git/` directory to detach it from the template's version history:
-
-```sh
-rm -rf .git
-```
-
-## Step 3: Initialize a New Git Repository
-
-Initialize a new Git repository in your project's directory:
-
-```sh
-git init
-```
-
-## Step 4: Integrate Your Existing Project Files
-
-Copy your existing project files into the relevant directories within the template structure. Ensure that:
-
-- Source files are placed in the `src/` directory.
-- The main program driver is placed in the `app/` directory.
-- Tests are placed in the `test/` directory.
-- Documentation is placed in the `docs/` directory.
-
-## Step 5: Update Configuration Files
-
-Review and update the configuration files to reflect your project's specifics. Key files to review include:
-
-- `fpm.toml`: Update with your project's name, version, and dependencies.
-- `.vscode/settings.json`: Ensure paths and settings are appropriate for your project.
-- `.pre-commit-config.yaml`: Adjust pre-commit hooks if necessary.
-
-## Step 6: Initialize Git and Make the First Commit
-
-Add all your project files to the new repository, commit the changes, and push to your remote repository (e.g., GitHub, GitLab).
-
-```sh
-git add .
-git commit -m "Initial commit: Migrated project to Fortran Project Template"
-git remote add origin <your-remote-repository-url>
-git push -u origin master
-```
-
-## Step 7: Verify Setup
-
-Run the provided tests and build commands to ensure everything is correctly configured:
+Build and run the example code and added test to ensure the project is correctly configured:
 
 ```sh
 fpm test
@@ -79,7 +30,24 @@ fpm run
 
 This step relies on creating and activating your environment, including installing all packages. See the main [Step-by-step instructions](../README.md#step-by-step-instructions).
 
-## Step 8: Final Adjustments
+## Step 3: Integrate Your Existing Project Files
 
-- Review and Edit `README.md`: Update this file to reflect your project's details, ensuring all sections are relevant.
+Copy your existing project files into the relevant directories within the template structure. Ensure that:
+
+- The main program driver is placed in the `app/` directory. The driver file is the one that contains the Fortran `program`. There can be multiple driver programs present.
+- Source files are placed in the `src/` directory. The hierarchy doesn't have to be flat.
+- Tests are placed in the `test/` directory.
+- Documentation is placed in the `docs/` directory.
+
+## Step 4: Update Configuration Files
+
+Review and update the configuration files to reflect your project's specifics. Key files to review include:
+
+- `fpm.toml`: Update with your project's name, version, and dependencies.
+- `.vscode/settings.json`: Ensure paths and settings are appropriate for your project.
+- `.pre-commit-config.yaml`: Adjust or update pre-commit hooks as necessary.
+
+## Step 5: Final Adjustments
+
+- Review and Edit `README.md`, to reflect your project's details, ensuring all sections are relevant. Remove redundant or unneeded information.
 - Configure Additional Tools: If your project uses additional tools or configurations, ensure they are properly set up and documented.

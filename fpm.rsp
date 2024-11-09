@@ -1,0 +1,23 @@
+@buildmpiifx
+option build --compiler ifx --profile release --flag "-O3 -g -xHost"
+
+@buildmpiifort
+option build --compiler ifort --profile release --flag "-O3 -g -xHost -qopt-zmm-usage=high -qopt-report=2 -qopt-report-phase=all"
+
+@buildgcc
+option build --compiler gfortran --profile release --flag "-03 -flto -march=native -fPIC -funroll-loops"
+
+@debug_intel
+option build --compiler ifort --profile debug --flag "-O0 -g -traceback -warn all -debug all -check all -shared-intel -heap-arrays -fp-stack-check -gen-interfaces -ftrapuv -fpe-all0 -init=snan,zero"
+
+@debug_gcc
+option build --compiler gfortran --profile debug --flag "-Og -g -fbacktrace -Wall -pedantic -Warray-temporaries -Wconversion -Wextra -fcheck=all -ffpe-trap=invalid,overflow,underflow,denormal -fstack-arrays -finit-real=snan -finit-integer=-99999 -fmax-errors=20"
+
+@installgcc
+option install --compiler gfortran --profile release --prefix $PWD --flag "-O2"
+
+@installgcc-opt
+option install --compiler gfortran --profile release --prefix $PWD --flag "-O3 -flto -march=native -fPIC -funroll-loops"
+
+@installgcc-opt2
+option install --compiler gfortran --profile release --prefix $PWD --flag "-O3 -flto -march=native -fPIC -funroll-loops -ffast-math -fassociative-math -freciprocal-math"

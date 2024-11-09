@@ -1,3 +1,0 @@
-fortls
-fprettify
-pre-commit

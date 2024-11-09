@@ -8,11 +8,18 @@ authors = [
 ]
 description = "Fortran Template Project"
 readme = "README.md"
-license = { file = "LICENSE.txt" }
+license = { file = "LICENSE" }
 keywords = ["fortran", "modern fortran", "mpi", "vscode"]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Programming Language :: Python",
+]
+
+[project.optional-dependencies]
+dev = [
+    "fortls",
+    "fprettify",
+    "pre-commit",
 ]
 
 [project.urls]

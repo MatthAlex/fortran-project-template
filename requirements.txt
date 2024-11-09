@@ -1,3 +1,0 @@
-fpm
-ford
-graphviz
