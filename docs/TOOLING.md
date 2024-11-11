@@ -81,13 +81,13 @@ The `.fortls` config takes precedence where settings overlap.
 
 ### Linting
 
-Multiple compiler-based linters are supported:
+The "Modern Fortran" extension supports multiple compilers for linting:
 
 - GNU's `gfortran`
 - Intel's `ifort` and `ifx`
 - NAG's `nagfor`
 
-These linters provide real-time feedback on:
+The linter provides real-time feedback on:
 
 - Syntax errors
 - Variable usage and initialization
@@ -95,6 +95,14 @@ These linters provide real-time feedback on:
 - Array bounds
 - Procedure interfaces
 - Common programming mistakes
+
+#### fortitude linter
+
+`fortitude` is a new, rust-based, Fortran linter being actively [developed](https://github.com/PlasmaFAIR/fortitude).
+
+It has been integrated in `pre-commit`, so it will run automatically when commiting or pushing. Included configuration in `fpm.toml`.
+
+To run independently, simply invoke: `fortitude check` to check all Fortran files present (or add the path to a Fortran file).
 
 ## Code Formatting
 

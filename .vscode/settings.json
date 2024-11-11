@@ -14,7 +14,7 @@
     "editor.unicodeHighlight.ambiguousCharacters": false,
     "editor.formatOnSaveMode": "file",
     "files.autoSave": "onWindowChange",
-    "files.trimFinalNewlines": false,
+    "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
     // "hides" files from the Explorer
     "files.exclude": {
@@ -92,13 +92,17 @@
         "-Wextra",
         "-pedantic",
         "-Warray-temporaries",
-        "-Wconversion",
+        "-Wconversion-extra",
         "-fbacktrace",
-        "-O0",
-        "-g",
+        "-Og",
+        "-g3",
         "-std=f2018",
         "-Wuse-without-only",
         "-Wrealloc-lhs",
+        "-Wrealloc-lhs-all",
+        "-Wimplicit-interface",
+        "-Wimplicit-procedure",
+        "-Wcharacter-truncation",
     ],
     "fortran.linter.includePaths": [
         "${workspaceFolder}/.generated_modules"

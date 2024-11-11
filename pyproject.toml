@@ -1,12 +1,16 @@
 [project]
 name = "fortran-project-template"
 version = "2024.0.1"
-dependencies = ["fpm", "ford", "graphviz"]
+description = "An opinionated one-stop shop for new and old Fortran projects, offering seamless compiling, building, packaging, linting, formatting, and more, with modern tools like FPM, pre-commit, fprettify, and ford."
+dependencies = [
+    "fpm",
+    "ford",
+    "graphviz",
+]
 requires-python = ">=3.8"
 authors = [
   { name = "Your name", email = "your@email.com" },
 ]
-description = "Fortran Template Project"
 readme = "README.md"
 license = { file = "LICENSE" }
 keywords = ["fortran", "modern fortran", "mpi", "vscode"]
@@ -20,6 +24,7 @@ dev = [
     "fortls",
     "fprettify",
     "pre-commit",
+    "fortitude-lint",
 ]
 
 [project.urls]

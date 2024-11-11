@@ -4,7 +4,7 @@ default_install_hook_types: [pre-commit, pre-push]
 fail_fast: false
 repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
-  rev: v4.5.0
+  rev: v5.0.0
   hooks:
   - id: trailing-whitespace
   - id: end-of-file-fixer
@@ -13,7 +13,7 @@ repos:
   - id: check-added-large-files
   - id: check-merge-conflict
 
-- repo: https://github.com/pseewald/fprettify
+- repo: https://github.com/fortran-lang/fprettify
   rev: v0.3.7
   hooks:
   - id: fprettify
@@ -40,3 +40,13 @@ repos:
     language: system
     pass_filenames: false
     always_run: true
+
+- repo: local
+  hooks:
+  - id: fortitude-lint
+    name: Run Fortitude linter
+    entry: fortitude check
+    language: system
+    pass_filenames: yes
+    always_run: true
+    files: \.[fF]\d*$
