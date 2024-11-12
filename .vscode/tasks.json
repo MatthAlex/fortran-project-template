@@ -1,0 +1,91 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Set Environment",
+      "type":"shell",
+      "command": "export FPM_FC=gfortran",
+    },
+    { "label": "fpm: install",
+      "type": "shell",
+      "command": "fpm",
+      "args": [
+        "install",
+        "--compiler", "gfortran",
+        "--c-compiler", "gcc",
+        "--profile",
+        "debug",
+        "--flag", "-Og",
+        "--prefix",
+        "${workspaceRoot}/build/vscode",
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      // Enable if using the intel OneAPI compiler
+      // "dependsOn": ["Setup OneAPI"]
+    },
+    { "label": "fpm: install example",
+      "type": "shell",
+      "command": "fpm",
+      "args": [
+        "run",
+        "--profile",
+        "debug",
+        "--example",
+        "demo",
+        "--runner",
+        "'install -b -m 0711 -p -t ./build/'"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    { "label": "fpm: test Single File",
+      "type": "shell",
+      "command": "fpm",
+      "args": [
+        "test",
+        "--target",
+        "${fileBasenameNoExtension}",
+        "--profile",
+        "debug",
+        "--runner",
+        "cp",
+        "--",
+        "${workspaceFolder}/build/vscode/test/"
+      ],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "dependsOn": ["Copy Directory Structure"],
+      "dependsOrder": "sequence"
+    },
+    { "label": "Copy Directory Structure",
+      "type": "shell",
+      "options": { "cwd": "${workspaceFolder}/test" },
+      "linux": {
+        "command": "find",
+        "args": [
+          ".",
+          "-type",
+          "d",
+          "-exec",
+          "mkdir",
+          "-p",
+          "--",
+          "${workspaceRoot}/build/vscode/test/{}",
+          "\\;"
+        ]
+      }
+    },
+    { "label": "Setup OneAPI",
+      "command": "${command:intel-corporation.oneapi-environment-configurator.initializeEnvironment}"
+    },
+  ]
+}
