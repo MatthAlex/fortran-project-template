@@ -1,0 +1,15 @@
+{
+  "config": {
+    "number_processes": 48,
+    "number-processes-per-node": 48,
+    "number_nodes": 1,
+    "maximum-threads-per-process/tpp": 1,
+    "mpi_command": "mpirun -n <number_processes>",
+    "run_command": "<executable>",
+    "executable": "path/to/git/fortran-project-template/bin/app_name",
+    "comments": "A simple experiment that uses MPI",
+    "object_coverage_threshold": 0,
+    "base_run_name": "app_name",
+    "envv_OMP_NUM_THREADS": 1
+  },
+}

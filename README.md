@@ -89,23 +89,21 @@ Fortran remains a crucial language in scientific computing, engineering, and hig
 
     See a step-by-step guide on how to [migrate your project](./docs/MIGRATION.md).
 
-## Code Quality
+## Development Tools
 
-This template integrates several tools to maintain high code quality:
+The template includes preconfigured development tools and settings for Modern Fortran development, with configurations for:
 
-### IDE Integration
-
-- Real-time error detection and linting via the Modern Fortran extension and `fortls` language server
-- Intelligent code completion and navigation
-- Code formatting with `fprettify` for consistent style
-
-### Automated Checks
-
-- Pre-commit hooks run tests and quality checks before git commit and push
+- VS Code integration with Modern Fortran extension
+- Language server features with `fortls`
+- Code formatting with `fprettify`
 - Automated testing with `fpm test`
-- Compile-time checks with `fpm build` (debug/release modes)
+- Package management with `fpm`
 
-For detailed configuration and usage instructions, see [TOOLING.md](./docs/TOOLING.md).
+For detailed setup instructions and tool configurations, see [TOOLING.md](./docs/TOOLING.md).
+
+### Profiling
+
+For information on profiling, see [PROFILING.md](./docs/PROFILING.md).
 
 ## Documentation
 
@@ -117,18 +115,6 @@ To generate dcoumentation for this sample project, and then view it on the brows
 ford ford.md
 firefox docs/ford/index.html  # Alternatively, use your preferred browser
 ```
-
-## Development Tools
-
-The template includes preconfigured development tools and settings for Modern Fortran development, with optimized configurations for:
-
-- VS Code integration
-- Language server features
-- Code formatting
-- Automated testing
-- Package management
-
-For detailed setup instructions and tool configurations, see [TOOLING.md](./docs/TOOLING.md).
 
 ## Contributing
 

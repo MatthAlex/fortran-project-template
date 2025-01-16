@@ -57,7 +57,7 @@ Alternatively, recommended extensions will appear on the "Recommended" tab, cour
 
 ## Language Server
 
-The Fortran Language Server (`fortls`) provides advanced IDE functionality:
+The Fortran Language Server (`fortls`) provides advanced IDE functionality, and is used by the Modern Fortran extension:
 
 ### Features
 
@@ -66,10 +66,6 @@ The Fortran Language Server (`fortls`) provides advanced IDE functionality:
 - Go to definition and find references
 - Symbol detection across your project
 - Real-time error detection and diagnostics
-
-### Installation
-
-Installation is discussed in [README step-by-step instructions](../README.md#step-by-step-instructions).
 
 ### Configuration
 

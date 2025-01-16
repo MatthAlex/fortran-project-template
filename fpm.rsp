@@ -21,3 +21,6 @@ option install --compiler gfortran --profile release --prefix $PWD --flag "-O3 -
 
 @installgcc-opt2
 option install --compiler gfortran --profile release --prefix $PWD --flag "-O3 -flto -march=native -fPIC -funroll-loops -ffast-math -fassociative-math -freciprocal-math"
+
+@installgcc-maqao
+option install --compiler gfortran --profile release --prefix $PWD --flag "-g -fno-omit-frame-pointer -O3 -flto -march=native -fPIC -funroll-loops -ffast-math -fassociative-math -freciprocal-math"
