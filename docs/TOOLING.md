@@ -53,6 +53,7 @@ Alternatively, recommended extensions will appear on the "Recommended" tab, cour
 - `Git History`: In-editor Git functionality
 - `Gitlens`: In-editor Git functionality
 - `Even Better TOML`: TOML files syntax highlighting
+- `EditorConfig For VSCode`: Uses `.editorconfig` to resolve the configuration for that particular file and applies any relevant editor settings.
 
 ## Language Server
 
