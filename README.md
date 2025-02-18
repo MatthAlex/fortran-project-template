@@ -4,11 +4,10 @@ Modern Fortran development made simple - an opinionated, batteries-included proj
 
 - [Why This Template?](#why-this-template)
 - [Getting Started](#getting-started)
-- [Code Quality](#code-quality)
-- [Documentation](#documentation)
+- [Style Guide and Best Practices](#style-guide-and-best-practices)
 - [Development Tools](#development-tools)
+- [Documentation](#documentation)
 - [Contributing](#contributing)
-- [Contact](#contact)
 - [License](#license)
 - [Appendix](#appendix)
 
@@ -89,6 +88,12 @@ Fortran remains a crucial language in scientific computing, engineering, and hig
 
     See a step-by-step guide on how to [migrate your project](./docs/MIGRATION.md).
 
+## Style Guide and Best Practices
+
+The integrated tooling has been configured to automatically conform the code to a set of prescribed rules.
+
+These rules are roughly outlined in the [STYLE_GUIDE.md](./docs/STYLE_GUIDE.md).
+
 ## Development Tools
 
 The template includes preconfigured development tools and settings for Modern Fortran development, with configurations for:
@@ -120,10 +125,6 @@ firefox docs/ford/index.html  # Alternatively, use your preferred browser
 
 Contributions from the community are welcome. To contribute, consider opening an issue or pull request with changes and suggestions.
 
-## Contact
-
-For questions or suggestions, please contact us at [email](m.alexandrakis@qmul.ac.uk) or open an issue.
-
 ## License
 
 The project is operating under an [MIT](./LICENSE) license. You are free to use, modify, and distribute the code as needed for your project. Feel free to adapt and customize it to suit your requirements.
@@ -139,14 +140,20 @@ $ tree -Ia '__pycache__|.git|.pytest_cache|.venv|build|.gen*|ford'
 │   └── main.f90
 ├── docs
 │   ├── MIGRATION.md
+│   ├── PROFILING.md
+│   ├── STYLE_GUIDE.md
 │   └── TOOLING.md
+├── .editorconfig
 ├── ford.md  # FORD config file
 ├── .fortls  # VSCode Modern Fortran config file
+├── fpm.rsp
 ├── fpm.toml  # Fortran Package Manager config file
 ├── .fprettify.rc  # fprettify config file
 ├── .gitignore  # Git ignore list of files and directories
 ├── LICENSE
 ├── .pre-commit-config.yaml  # pre-commit config file
+├── profiling
+│   └── template_mpi.json
 ├── pyproject.toml  # config file
 ├── README.md  # you are here!
 ├── src  # All source code files are placed in here, except main driver
